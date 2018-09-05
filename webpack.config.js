@@ -9,9 +9,18 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.(scss)$/,
-        use: [{
+  {
+       test: /\.(png|jpg|gif|svg|jpeg)$/,
+       loader: 'file-loader',
+       options: {
+       name: '[path][name].[ext]'
+       }
+
+  },
+
+  {
+    test: /\.(scss)$/,
+    use: [{
           loader: 'style-loader', // inject CSS to page
         }, {
           loader: 'css-loader', // translates CSS into CommonJS modules
@@ -20,8 +29,8 @@ module.exports = {
           options: {
             plugins: function () { // post css plugins, can be exported to postcss.config.js
               return [
-                require('precss'),
-                require('autoprefixer')
+              require('precss'),
+              require('autoprefixer')
               ];
             }
           }
@@ -29,13 +38,13 @@ module.exports = {
           loader: 'sass-loader' // compiles Sass to CSS
         }]
       }
-    ]
-  },
-  plugins: [
+      ]
+    },
+    plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
       inject: 'head'
     })
-  ],
-  mode: 'development'
-}
+    ],
+    mode: 'development'
+  }

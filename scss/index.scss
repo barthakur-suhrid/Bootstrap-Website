@@ -1,2 +1,5 @@
-@import 'custom';
 @import '~bootstrap/scss/bootstrap';
+@import '~bootswatch/dist/lumen/_bootswatch';
+@import '~bootswatch/dist/lumen/_variables';
+@import '_custom';
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');

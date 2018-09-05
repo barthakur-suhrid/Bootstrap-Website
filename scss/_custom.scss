@@ -1,1 +1,180 @@
-$blue: red;
+$body_color:black;
+$gradient_yellow:linear-gradient(rgba(255,146,24,0.6),rgba(0,0,0,0.3));
+$text_color:white;
+$shadow:3px 3px  2px #5500B6;
+$gradient_black:linear-gradient(rgba(0,0,0,0.5),rgba(255,255,255,0.5));
+$gradient_purple:linear-gradient(rgba(174,19,241,.4),rgba(255,255,255,.3));
+
+@mixin refit {
+		margin:20px 0px 20px 0px;
+		padding:0px;
+
+
+}
+
+@mixin bg-parallax($gradient,$url){
+	background:$gradient,url($url) center center  no-repeat;
+	background-attachment: fixed;
+	height:100vh;
+	background-size:100% 100%;
+
+}
+
+@mixin readjust($color,$shadow){
+	color:$color;
+	text-shadow:$shadow;
+	border: 0px;
+	margin-top: 30px;
+}
+
+
+#l-body{
+
+	background: $body_color;
+	color: $text_color;
+}
+
+#accordionExample{
+	@include refit;
+	
+}
+
+#DeadSpace{
+	@include bg-parallax($gradient_purple,'../images/concert3.jpg');
+	height: 200px;
+}
+
+.container-fluid{
+	padding:0px;
+}
+
+#about-tag{
+	@include refit;
+}
+
+
+#group_list{
+	min-height: 582px;
+}
+
+
+#My_Hero{
+	@include bg-parallax($gradient_black,'../images/new0.jpg');
+	@include readjust(white,$shadow)
+}
+
+#carouselExampleFade{
+
+	@include refit;
+	
+	.carousel-inner{
+		
+		.carousel-item{
+			
+			height:100vh;
+			img{
+				height: 100%;
+			}
+			.carousel-caption{
+
+			background:$gradient_black;
+			text-shadow:$shadow; 
+		    padding:0px;
+		}
+
+		}
+	}
+}
+
+.card-img-top {
+    width: 100%;
+    height: 20vw;
+    size:100% 100%;
+}
+
+
+
+section {
+
+    padding: 60px 0;
+	
+	.section-title {
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  }
+}
+
+
+
+#footer{
+   
+	h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    }
+
+
+		.social {
+			li {
+				a {
+					i {
+    					margin-right: 5px;
+						font-size:25px;
+					}	
+				}	
+			}
+		}
+
+		.quick-links {
+
+			 li:hover{
+
+						 a {
+						color:purple;
+						padding: 3px 0;
+						margin-left:10px;
+						font-weight:700;
+						 	i {
+
+							    font-weight: 700;
+							}
+						}	
+					}
+			li{ 
+				padding: 3px 0;
+				-webkit-transition: .5s all ease;
+				-moz-transition: .5s all ease;
+				transition: .5s all ease;
+
+				a{
+					color:#ffffff;
+					i{
+						font-weight: 400;
+					}
+				}
+				 a:hover{
+					color:purple;
+				}
+
+		  }
+		}
+	
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    border-bottom:1px solid yellow;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+
+	#LibraryContent{
+
+		min-height: 900px;
+ }
+
+}
