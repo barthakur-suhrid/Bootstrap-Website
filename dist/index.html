@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Radiohead</title>
-</head>
+<script type="text/javascript" src="bundle.js"></script></head>
 <body id="l-body">
   <div class="container-fluid no-gutter clearfix" id="Main-Container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top w-100 ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top ">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -50,7 +50,7 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
 
-        <button id="Notification" type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalCenter">
+        <button id="Notification" type="button " class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalCenter">
           Notifications <span class="badge badge-light">4</span>
         </button>
 
@@ -190,19 +190,19 @@
       </div>
     </div>
 
-    <div class="row w-100" id="DeadSpace">
+    <div id="DeadSpace">
 
     </div>
 
     <div id="group_list" class="container">
-      <div class="row w-100 justify-content-center" >
+      <div class="row w-100 justify-content-center" id="about-tag">
       <h2 class="col-sm-3 display-4 text-center">Library</h2>
       </div> 
-    <div  class="row w-100 justify-content-center">
+    <div id="group_list" class="row w-100 justify-content-center">
       <div class="col-xs-12 col-md-2">
         <div class="list-group" id="list-tab" role="tablist">
-          <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" >New Release Library</a>
-          <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" >Video Playlist</a>
+          <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">New Release Library</a>
+          <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Video Playlist</a>
         </div>
       </div>
       <div class="col-xs-12-12 col-md-10" id="LibraryContent">
@@ -415,11 +415,13 @@
             <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
           </ul>
         </div>
+        </hr>
       </div>  
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-          <p class="h6"> &copy;All right Reserved.<a class="text-green ml-2" href="#" target="_blank">RADIOHEAD</a></p>
+          <p class="h6">&copy All right Reserved.<a class="text-green ml-2" href="#" target="_blank">RADIOHEAD</a></p>
         </div>
+        </hr>
       </div>  
     </div>
   </section>
